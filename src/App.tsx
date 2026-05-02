@@ -51,8 +51,8 @@ export default function App() {
   return (
     <div className="min-h-screen bg-coffee-base font-sans text-stone-900 selection:bg-brand-green selection:text-white relative overflow-hidden">
       {/* Background Decorations */}
-      <div className="fixed top-[-100px] right-[-100px] w-[500px] h-[500px] bg-coffee-mist rounded-full blur-[80px] opacity-60 z-0 pointer-events-none"></div>
-      <div className="fixed bottom-[-100px] left-[-100px] w-[400px] h-[400px] bg-brand-green-light rounded-full blur-[80px] opacity-60 z-0 pointer-events-none"></div>
+      <div className="fixed top-[-100px] right-[-100px] w-[500px] h-[500px] bg-coffee-mist rounded-full blur-[80px] opacity-60 z-0 pointer-events-none hidden md:block"></div>
+      <div className="fixed bottom-[-100px] left-[-100px] w-[400px] h-[400px] bg-brand-green-light rounded-full blur-[80px] opacity-60 z-0 pointer-events-none hidden md:block"></div>
 
       {/* Navigation */}
       <nav 
@@ -148,7 +148,7 @@ export default function App() {
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute top-0 right-0 w-16 h-16 bg-brand-green rounded-full flex items-center justify-center text-white font-black text-lg shadow-xl border-4 border-white rotate-12">
-                    NEW
+                    NUEVO
                   </div>
                 </div>
               </div>
@@ -296,7 +296,7 @@ export default function App() {
                       "30 porciones por caja — para todo el mes."
                     ].map((step, i) => (
                       <li key={i} className="flex gap-4">
-                        <div className="w-6 h-6 rounded-full bg-brand-green/20 text-brand-green flex items-center justify-center shrink-0 font-black text-xs">{i + 1}</div>
+                        <div className="w-6 h-6 rounded-full bg-brand-green text-white flex items-center justify-center shrink-0 font-black text-xs shadow-lg shadow-brand-green/20">{i + 1}</div>
                         <p className="text-slate-600 font-medium">{step}</p>
                       </li>
                     ))}
@@ -311,9 +311,9 @@ export default function App() {
                       { label: "Con Leche", desc: "Cremoso & Suave" },
                       { label: "Frío o Caliente", desc: "A tu gusto" }
                     ].map((item, i) => (
-                      <div key={i} className="p-4 bg-white rounded-2xl border border-stone-100 shadow-sm">
-                        <div className="font-black text-coffee-deep text-xs uppercase tracking-wider mb-1">{item.label}</div>
-                        <div className="text-[10px] text-slate-400 font-bold uppercase">{item.desc}</div>
+                      <div key={i} className="p-4 bg-brand-green/10 rounded-2xl border border-brand-green/20 shadow-sm transition-transform hover:scale-105">
+                        <div className="font-black text-brand-green-dark text-xs uppercase tracking-wider mb-1">{item.label}</div>
+                        <div className="text-[10px] text-brand-green/60 font-bold uppercase">{item.desc}</div>
                       </div>
                     ))}
                   </div>
@@ -332,7 +332,7 @@ export default function App() {
                 <img 
                   src="https://drive.google.com/thumbnail?id=1d7WW63w2rvv3V9Cc8XGEWuV9EuCR6kmz&sz=w1000" 
                   alt="Preparando Café Funcional Pro" 
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                  className="w-full h-full object-cover transition-all duration-700 hover:scale-110"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-coffee-deep/80 to-transparent flex items-end p-12">
@@ -360,7 +360,7 @@ export default function App() {
               <img 
                 src="https://drive.google.com/thumbnail?id=1E3B8HEF6GOaTDiNdLKcgw8LjAjxceVZk&sz=w1000" 
                 alt="Beneficios Cafe Funcional Pro" 
-                className="relative rounded-[40px] shadow-2xl z-10 object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
+                className="relative rounded-[40px] shadow-2xl z-10 object-cover w-full h-full transition-all duration-700 hover:scale-105"
                 referrerPolicy="no-referrer"
               />
             </div>
@@ -603,7 +603,7 @@ export default function App() {
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-4 bg-coffee-rich text-white px-12 py-6 rounded-2xl font-black text-2xl hover:bg-brand-green transition-all shadow-2xl shadow-coffee-rich/20"
+                className="inline-flex items-center gap-4 bg-[#25D366] text-white px-12 py-6 rounded-2xl font-black text-2xl hover:bg-[#128C7E] transition-all shadow-2xl shadow-[#25D366]/20"
               >
                 <MessageCircle size={32} />
                 ORDENA POR WHATSAPP
